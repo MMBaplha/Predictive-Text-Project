@@ -1,0 +1,97 @@
+/* General reset for box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Removes the default outline when focused*/
+:focus {
+  outline: none;
+}
+
+/* Body styling with a linear gradient background */
+body {
+  background: linear-gradient(135deg, #62d5f2 0%, #f192c5 100%);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 40px;
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow inside the input field */
+  background-color: transparent;
+}
+
+/* Search container to center the search bar and suggestions */
+.search-container {
+  position: relative;
+  width: 300px;
+}
+
+/* General styling for input and suggestions list */
+.search-container input,
+.search-container .suggestions {
+  width: 100%;
+}
+
+/* Specific styling for the input */
+.search-container input {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Change border color and box shadow on focus */
+.search-container input:focus {
+  border: 1px solid #f3c9c5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Suggestions container styling */
+.search-container .suggestions {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  max-height: 150px;
+  overflow-y: scroll; /* Allow scrolling */
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* remove scrollbar */
+.search-container .suggestions::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+/* remove bullet point from unordered list styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Show the suggestions list when there are suggestions */
+ul.has-suggestions {
+  display: block;
+}
+
+/* List item styling */
+ul li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+/* Highlight list item on hover */
+ul li:hover {
+  background-color: #f1f1f1;
+}
